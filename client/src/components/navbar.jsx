@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full h-28 flex items-center bg-white shadow-black shadow-md">
+    <div className="w-full px-5 h-28 flex items-center bg-white shadow-black shadow-md">
       <section className="w-full h-full flex items-center justify-between px-4 sm:px-8 lg:px-16">
         <div
           className="font-serif text-black cursor-pointer"
@@ -34,7 +34,7 @@ function Navbar() {
 
         {/* Menu Links */}
         <div
-          className={`lg:flex lg:w-3/5 lg:justify-between font-serif text-gray-500 lg:items-center ${
+          className={`lg:flex lg:w-1/2 lg:justify-between font-serif text-gray-500 lg:items-center ${
             isOpen ? "block" : "hidden"
           }`}
         >
