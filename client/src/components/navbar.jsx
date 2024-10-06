@@ -13,6 +13,7 @@ function Navbar() {
   return (
     <div className="w-full px-5 h-28 flex items-center bg-white shadow-black shadow-md">
       <section className="w-full h-full flex items-center justify-between px-4 sm:px-8 lg:px-16">
+        {/* Logo */}
         <div
           className="font-serif text-black cursor-pointer"
           onClick={() => navigate("/")}
@@ -22,13 +23,13 @@ function Navbar() {
           <span className="font-sans text-pretty">Marketing & Branding</span>
         </div>
 
-        {/* Hamburger Icon for smaller screens */}
+        {/* Hamburger Icon */}
         <div className="block lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-500 focus:outline-none"
+            className="text-gray-700 focus:outline-none hover:text-black transition-colors duration-300"
           >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
           </button>
         </div>
 
@@ -36,10 +37,12 @@ function Navbar() {
         <div
           className={`lg:flex lg:w-1/2 lg:justify-between font-serif text-gray-500 lg:items-center ${
             isOpen ? "block" : "hidden"
-          }`}
+          } lg:block absolute lg:static bg-white lg:bg-transparent w-full lg:w-auto left-0 top-28 lg:top-0 shadow-lg lg:shadow-none transition-all duration-500 ease-in-out transform ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          } lg:translate-y-0`}
         >
           <div
-            className="hover:overline hover:text-black cursor-pointer mt-4 lg:mt-0"
+            className="hover:underline hover:text-black cursor-pointer mt-4 lg:mt-0 text-center lg:text-left"
             onClick={() => {
               navigate("/");
               setIsOpen(false);
@@ -48,7 +51,7 @@ function Navbar() {
             Home
           </div>
           <div
-            className="hover:overline hover:text-black cursor-pointer mt-4 lg:mt-0"
+            className="hover:underline hover:text-black cursor-pointer mt-4 lg:mt-0 text-center lg:text-left"
             onClick={() => {
               navigate("/about");
               setIsOpen(false);
@@ -57,7 +60,7 @@ function Navbar() {
             About Us
           </div>
           <div
-            className="hover:overline hover:text-black cursor-pointer mt-4 lg:mt-0"
+            className="hover:underline hover:text-black cursor-pointer mt-4 lg:mt-0 text-center lg:text-left"
             onClick={() => {
               navigate("/portfolio");
               setIsOpen(false);
@@ -66,7 +69,7 @@ function Navbar() {
             Portfolio
           </div>
           <div
-            className="hover:overline hover:text-black cursor-pointer mt-4 lg:mt-0"
+            className="hover:underline hover:text-black cursor-pointer mt-4 lg:mt-0 text-center lg:text-left"
             onClick={() => {
               navigate("/services");
               setIsOpen(false);
@@ -75,7 +78,7 @@ function Navbar() {
             Services
           </div>
           <div
-            className="hover:overline hover:text-black cursor-pointer mt-4 lg:mt-0"
+            className="hover:underline hover:text-black cursor-pointer mt-4 lg:mt-0 text-center lg:text-left"
             onClick={() => {
               navigate("/contact");
               setIsOpen(false);

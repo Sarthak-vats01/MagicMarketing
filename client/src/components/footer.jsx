@@ -11,7 +11,7 @@ function Footer() {
         <p className="flex flex-row items-center">
           <AiOutlineCopyright />
           2035 by Magic Marketing. Powered and secured by
-          <span className="underline ml-1">Vats</span>
+          <span className="ml-1 font-bold">Vats</span>
         </p>
         <div className="flex items-center justify-between w-24  text-base lg:text-xl">
           <FaFacebookF />
