@@ -37,7 +37,7 @@ function Navbar() {
         <div
           className={`lg:flex lg:w-1/2 lg:justify-between font-serif text-gray-500 lg:items-center ${
             isOpen ? "block" : "hidden"
-          } lg:block absolute lg:static bg-white lg:bg-transparent w-full lg:w-auto left-0 top-28 lg:top-0 shadow-lg lg:shadow-none transition-all duration-500 ease-in-out transform ${
+          } lg:block absolute lg:static  lg:w-1/2  right-16 top-28 lg:top-0 transition-all duration-500 ease-in-out transform ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           } lg:translate-y-0`}
         >
